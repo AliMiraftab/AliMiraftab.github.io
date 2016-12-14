@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ali Miraftab, Horrible Cop, Launches Site"
+title: "Ali Miraftab, Launches Site"
 date: 2016-12-14
 ---
 
