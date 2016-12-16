@@ -1,0 +1,48 @@
+# Post settings
+collections:
+    Posts_en:
+        output: true
+        permalink: /en/posts/:title/
+    Posts_fa:
+        output: true
+        permalink: /fa/posts/:title/
+
+future: true
+excerpt_separator: <!--more-->
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Blog information
+title: mlibre personal blog
+description: >
+    Here is my personal blog(mlibre). I write about everything, about Linux, about world, about goodness, about ...
+    In this blog you will find Tutorials, Education texts, Academic things and ...
+email: m.gh@linuxmail.org
+author: I like To live as Free & OpenSource, Make world better place, ....
+github_username: mlibre
+favicon: /files/images/favicon.png
+
+# My image folder
+my_images_path: files/images/my/
+
+# configuration
+gems: ["octopress-paginate" , "jekyll-seo-tag"]
+exclude:    ["default.gems" , "Gemfile" , "Gemfile.lock" , ".gitignore" , "license" , ".git" , "readme.md"]
+keep_files: [".git" , "en/license.html" , "readme.md"]
+source: .
+destination: ./site
+layouts_dir: _layouts
+markdown_ext: "md"
+liquid:
+    error_mode: strict
+
+# Timezone
+timezone: Etc/GMT0
+
+# Blog Address configs
+baseurl: "/blog"
+url: "https://mlibre.github.io"
+#
+# baseurl: ""
+# url: "http://localhost:4000"

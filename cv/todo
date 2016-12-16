@@ -1,0 +1,9 @@
+exit nav from header
+<header></header>
+<nav></nav>
+--------------
+change tags color
+------------
+fix page numbers size, maybe easily fixed by overflow-hidden
+--------
+...
