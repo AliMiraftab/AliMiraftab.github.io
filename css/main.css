@@ -47,6 +47,7 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+    display: inline:
 }
 
 ul, li {
