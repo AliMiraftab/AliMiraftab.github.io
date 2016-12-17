@@ -19,6 +19,12 @@ nav img, footer img {
     margin-right: 20px;
 }
 
+img{
+    display: inline;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
 
 a {
     text-decoration: none;
