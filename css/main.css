@@ -17,7 +17,11 @@ nav ul li, footer ul li {
 nav img, footer img {
     display: inline;
     margin-right: 20px;
+    margin-bottom:20px;
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -47,10 +51,10 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
-    display: inline:
 }
 
 ul, li {
   list-style: none;
   display: inline;
 }
+
