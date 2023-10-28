@@ -10,25 +10,25 @@ Since then, this field has been evolving. Generative AI in Computer Vision appli
 Generative AI refers to using models and algorithms that can generate new data or content, often images, based on patterns and information learned from existing data. 
 When applied to Computer Vision, it opens up various exciting possibilities. Here are some key aspects:
 
-1. Image Synthesis: Generative AI can create highly realistic images of objects, scenes, or even people that do not exist. This can be valuable in fields like design, gaming, and entertainment.
+- Image Synthesis: Generative AI can create highly realistic images of objects, scenes, or even people that do not exist. This can be valuable in fields like design, gaming, and entertainment.
 
-2. Data Augmentation: Generative models can generate additional data to augment training datasets. This is particularly useful when there is limited labeled data available for a specific Computer Vision task.
+- Data Augmentation: Generative models can generate additional data to augment training datasets. This is particularly useful when there is limited labeled data available for a specific Computer Vision task.
 
-3. Super-Resolution: Generative models can enhance the resolution of images, making them clearer and more detailed. This can be applied in medical imaging, surveillance, and photography.
+- Super-Resolution: Generative models can enhance the resolution of images, making them clearer and more detailed. This can be applied in medical imaging, surveillance, and photography.
 
-4. Style Transfer: Style transfer techniques use generative models to apply the artistic style of one image to another, creating visually appealing and creative results.
+- Style Transfer: Style transfer techniques use generative models to apply the artistic style of one image to another, creating visually appealing and creative results.
 
-5. Anomaly Detection: Generative AI can learn the regular patterns in images, allowing it to detect anomalies or outliers, which is crucial in security and quality control applications.
+- Anomaly Detection: Generative AI can learn the regular patterns in images, allowing it to detect anomalies or outliers, which is crucial in security and quality control applications.
 
-6. Image-to-Image Translation: Generative models can convert images from one domain to another, such as turning satellite images into maps or sketches into photorealistic images.
+- Image-to-Image Translation: Generative models can convert images from one domain to another, such as turning satellite images into maps or sketches into photorealistic images.
 
-7. Content Generation: These models can generate content like captions, descriptions, or even entire scenes from images, making them invaluable in content creation and accessibility applications.
+- Content Generation: These models can generate content like captions, descriptions, or even entire scenes from images, making them invaluable in content creation and accessibility applications.
 
-8. Generative Adversarial Networks (GANs): GANs are a popular framework for generative AI in Computer Vision. They consist of two neural networks, a generator, and a discriminator, that compete in a game to improve the quality of generated content continually.
+- Generative Adversarial Networks (GANs): GANs are a popular framework for generative AI in Computer Vision. They consist of two neural networks, a generator, and a discriminator, that compete in a game to improve the quality of generated content continually.
 
-9. Unsupervised Learning: Generative AI can be used for unsupervised learning in Computer Vision, allowing systems to automatically learn and extract features from data without the need for manual annotations.
+- Unsupervised Learning: Generative AI can be used for unsupervised learning in Computer Vision, allowing systems to automatically learn and extract features from data without requiring manual annotations.
 
-10. Art and Creativity: Generative AI in Computer Vision has found its place in art and creative expression, with artists and designers using these tools to create unique and innovative works.
+- Art and Creativity: Generative AI in Computer Vision has found its place in art and creative expression, with artists and designers using these tools to create unique and innovative works.
 
 The combination of Generative AI and Computer Vision can transform various industries by automating tasks, enhancing visual content, and unlocking new possibilities for creativity and problem-solving. It continues to be an exciting area of research and development in AI.
 
