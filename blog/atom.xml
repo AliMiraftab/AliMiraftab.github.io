@@ -15,14 +15,12 @@ layout: feed
 	</author>
 
 	{% for post in site.posts %}
-		<entry>
-			<p>
+		<entry>			
 			<title>{{ post.title }}</title>
 			<link href="http://AliMiraftab.github.io{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
 			<id>http://AliMiraftab.github.io{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
-			</p>
 		</entry>
 	{% endfor %}
 
