@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Semantic Search"
+title: "Optimization Algorithms"
 date: 2024-01-08
 ---
 
