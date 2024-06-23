@@ -18,5 +18,7 @@ LDA represents documents as a mixture of topics. Similarly, a topic is a mixture
   
 
 # Refrences
+
 [A Beginner’s Guide to Latent Dirichlet Allocation(LDA)](https://medium.com/@corymaklin/latent-dirichlet-allocation-dfcea0b1fddc)
 [Latent Dirichlet Allocation](https://medium.com/@corymaklin/latent-dirichlet-allocation-dfcea0b1fddc)
+
