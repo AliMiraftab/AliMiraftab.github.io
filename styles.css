@@ -8,6 +8,8 @@
 --blog-font-size: 20px; /* Increase the font size for the blog list */
 --link-color-dark: #ffcc00; /* Dark mode link color */
 --link-color-dark-active: #ffa500; /* Dark mode link color when clicked */
+--blog-list-background-color-light: #f0f0f0; /* Light mode blog list background */
+--blog-list-text-color-light: #333333; /* Light mode blog list text color */
 --blog-list-background-color-dark: #444444; /* Dark mode blog list background */
 --blog-list-text-color-dark: #ffffff; /* Dark mode blog list text color */
 }
@@ -82,7 +84,7 @@ border-top-left-radius: 5px;
 border-bottom-left-radius: 5px;
 }
 
-toggle-label-right {
+.toggle-label-right {
 border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
 }
@@ -97,17 +99,23 @@ background-color: #007bff;
 color: #ffffff;
 }
 
-/* Blog list font size and dark mode styles */
+/* Blog list font size and light/dark mode styles */
 .blog-list li {
 font-size: var(--blog-font-size);
+background-color: var(--blog-list-background-color-light);
+color: var(--blog-list-text-color-light);
+padding: 10px;
+margin-bottom: 5px;
+border-radius: 5px;
 }
 
 body.dark-mode .blog-list li {
 background-color: var(--blog-list-background-color-dark);
 color: var(--blog-list-text-color-dark);
-padding: 10px;
-margin-bottom: 5px;
-border-radius: 5px;
+}
+
+.blog-list li a {
+color: var(--link-color);
 }
 
 body.dark-mode .blog-list li a {
