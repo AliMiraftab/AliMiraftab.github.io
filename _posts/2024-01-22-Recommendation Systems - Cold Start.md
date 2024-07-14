@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RecSys - Cold Start
+title: Recommendation Systems - Cold Start
 date: 2024-01-22 09:45:00 -0400
 topic: RecSys
 ---
