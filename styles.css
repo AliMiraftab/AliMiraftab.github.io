@@ -141,4 +141,27 @@ margin-right: 5px;
 padding: 5px;
 font-size: 14px;
 }
+
+/* Add margin */
+.rtl-list {
+direction: ltr; /* Set text direction to left-to-right */
+max-width: 800px; /* Set a maximum width for the content */
+margin: 0 auto; /* Center the content */
+padding-left: 0; /* Remove default padding */
+padding-right: 0; /* Remove default padding */
+}
+
+.rtl-list li {
+text-align: left; /* Align text content to the right */
+margin-bottom: 20px; /* Add space between list items */
+padding: 10px; /* Optional: Add padding for better spacing */
+border: 1px solid #ccc; /* Optional: Add border for better visibility */
+border-radius: 5px; /* Optional: Add border radius for rounded corners */
+background-color: #f9f9f9; /* Optional: Background color */
+}
+
+.rtl-list li .date {
+direction: ltr; /* Reset text direction for date */
+text-align: right; /* Align date text to the left within the list item */
+}
   
