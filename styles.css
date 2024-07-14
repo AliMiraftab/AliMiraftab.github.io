@@ -1,4 +1,4 @@
-/* Default (Light) Mode */
+/* Light Mode */
 :root {
 --header-background-color: #f8f9fa;
 --header-text-color: #333333;
@@ -81,16 +81,12 @@ border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
 }
 
-.toggle-checkbox:checked + .container {
-background-color: var(--body-background-color);
-color: var(--body-text-color);
+body.dark-mode .toggle-labels .toggle-label-left {
+background-color: #333;
+color: #ffffff;
 }
 
-.toggle-checkbox:checked + .container header {
-background-color: var(--header-background-color);
-color: var(--header-text-color);
-}
-
-.toggle-checkbox:checked + .container nav a {
-color: var(--link-color);
+body.dark-mode .toggle-labels .toggle-label-right {
+background-color: #007bff;
+color: #ffffff;
 }
