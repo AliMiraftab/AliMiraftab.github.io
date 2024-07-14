@@ -1,21 +1,22 @@
-/* Default (Light) Mode */
+/* Light Mode */
 :root {
 --header-background-color: #f8f9fa;
 --header-text-color: #333333;
 --link-color: #007bff;
 --body-background-color: #ffffff;
 --body-text-color: #333333;
---blog-font-size: 18px; /* Add this line for blog font size */
+--blog-font-size: 18px; /* Font size for blog list */
+--link-color-dark: #ffcc00; /* Add this line for dark mode link color */
 }
 
 /* Dark Mode */
 body.dark-mode {
 --header-background-color: #212529;
 --header-text-color: #ffffff;
---link-color: #ffffff;
+--link-color: var(--link-color-dark); /* Use the new dark mode link color */
 --body-background-color: #333333;
 --body-text-color: #ffffff;
---blog-font-size: 18px; /* Ensure this is the same for consistency */
+--blog-font-size: 18px;
 }
 
 body {
