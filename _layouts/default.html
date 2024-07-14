@@ -1,60 +1,10 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    header {
-      background-color: var(--header-background-color);
-      color: var(--header-text-color);
-      padding: 10px;
-      text-align: center;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    nav li {
-      display: inline;
-      margin-right: 10px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--link-color);
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-    }
-    /* Light mode */
-    :root {
-      --background-color-light: #ffffff;
-      --text-color-light: #333333;
-      --header-background-color-light: #f8f9fa;
-      --header-text-color-light: #333333;
-      --link-color-light: #007bff;
-    }
-    /* Dark mode */
-    :root.dark-mode {
-      --background-color: #333333;
-      --text-color: #ffffff;
-      --header-background-color: #212529;
-      --header-text-color: #ffffff;
-      --link-color: #007bff;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header>
