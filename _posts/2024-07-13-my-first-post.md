@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: My First Post
 date: 2024-07-13 10:00:00 -0400
 topic: Technology
