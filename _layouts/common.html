@@ -1,4 +1,4 @@
-<!-- File: _layouts/blog.html -->
+<!-- File: _layouts/common.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+  <input type="checkbox" id="toggle" class="toggle-checkbox">
+  <div class="toggle-labels">
+    <label for="toggle" class="toggle-label toggle-label-left">Light</label>
+    <label for="toggle" class="toggle-label toggle-label-right">Dark</label>
+  </div>
   <header>
     <h1>{{ site.title }}</h1>
     <nav>
@@ -23,5 +28,11 @@
   <main>
     {{ content }}
   </main>
+  <script>
+    const toggleCheckbox = document.getElementById('toggle');
+    toggleCheckbox.addEventListener('change', function() {
+      document.body.classList.toggle('dark-mode', this.checked);
+    });
+  </script>
 </body>
 </html>
