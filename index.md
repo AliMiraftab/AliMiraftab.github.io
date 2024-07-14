@@ -12,6 +12,6 @@ title: Home
 - [CV](/cv/)
 - [Blogs](/blogs/) -->
 
-Test - I appreciate your interest in learning about me and my work. Currently, I’m working on the following technologies and applications:
+I appreciate your interest in learning about me and my work. Currently, I’m working on the following technologies and applications:
 
 - Product Semantic Search: combination of SBERT models and RAG techniques to recommend products in differnt channels for Dell.

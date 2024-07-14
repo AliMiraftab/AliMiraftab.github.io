@@ -4,92 +4,91 @@
     --header-text-color-light: #333333;
     --link-color-light: #007bff;
   }
-  
-  /* Dark Mode */
-  :root.dark-mode {
-    --header-background-color: #212529;
-    --header-text-color: #ffffff;
-    --link-color: #ffffff;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  header {
-    background-color: var(--header-background-color-light);
-    color: var(--header-text-color-light);
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  nav li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--link-color-light);
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Checkbox Hack for Toggle */
-  .toggle-checkbox {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
-  
-  .toggle-labels {
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
-    margin: 10px auto;
-  }
-  
-  .toggle-label {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
-  .toggle-label-left {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  
-  .toggle-label-right {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  
-  /* Toggle Styles */
-  .toggle-checkbox:checked ~ .container {
-    background-color: #333333;
-    color: #ffffff;
-  }
-  
-  .toggle-checkbox:checked ~ .container header {
-    background-color: #212529;
-    color: #ffffff;
-  }
-  
-  .toggle-checkbox:checked ~ .container nav a {
-    color: #ffffff;
-  }
-  
+
+/* Dark Mode */
+:root.dark-mode {
+--header-background-color: #212529;
+--header-text-color: #ffffff;
+--link-color: #ffffff;
+}
+
+body {
+font-family: Arial, sans-serif;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+background-color: var(--header-background-color-light);
+color: var(--header-text-color-light);
+padding: 10px;
+text-align: center;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+nav li {
+display: inline;
+margin-right: 10px;
+}
+
+nav a {
+text-decoration: none;
+color: var(--link-color-light);
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+/* Checkbox Hack for Toggle */
+.toggle-checkbox {
+position: absolute;
+opacity: 0;
+height: 0;
+width: 0;
+}
+
+.toggle-labels {
+display: flex;
+justify-content: space-between;
+width: 100px;
+margin: 10px auto;
+}
+
+.toggle-label {
+padding: 5px 10px;
+background-color: #007bff;
+color: #ffffff;
+cursor: pointer;
+}
+
+.toggle-label-left {
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+.toggle-label-right {
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+/* Toggle Styles */
+.toggle-checkbox:checked ~ .container {
+background-color: #333333;
+color: #ffffff;
+}
+
+.toggle-checkbox:checked ~ .container header {
+background-color: #212529;
+color: #ffffff;
+}
+
+.toggle-checkbox:checked ~ .container nav a {
+color: #ffffff;
+}
