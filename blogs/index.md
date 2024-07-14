@@ -1,5 +1,5 @@
 ---
-layout: common
+layout: default
 title: Blogs
 ---
 
