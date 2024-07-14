@@ -14,12 +14,6 @@
 --blog-list-text-color-dark: #ffffff; /* Dark mode blog list text color */
 }
 
-/* Change  */
-body {
-    margin: 20px; /* or any other value you prefer */
-    padding: 20px; /* or any other value you prefer */
-  }
-
 /* Dark Mode */
 body.dark-mode {
 --header-background-color: #212529;
@@ -31,6 +25,8 @@ body.dark-mode {
 }
 
 body {
+margin: 20px; /* or any other value you prefer */
+padding: 20px; /* or any other value you prefer */
 font-family: Arial, sans-serif;
 background-color: var(--body-background-color);
 color: var(--body-text-color);
@@ -110,7 +106,7 @@ color: #ffffff;
 font-size: var(--blog-font-size);
 background-color: var(--blog-list-background-color-light);
 color: var(--blog-list-text-color-light);
-padding: 50px;
+padding: 10px;
 margin-bottom: 5px;
 border-radius: 5px;
 }
