@@ -6,7 +6,9 @@
 --body-background-color: #ffffff;
 --body-text-color: #333333;
 --blog-font-size: 18px; /* Font size for blog list */
---link-color-dark: #ffcc00; /* Add this line for dark mode link color */
+--link-color-dark: #ffcc00; /* Dark mode link color */
+--blog-list-background-color-dark: #444444; /* Dark mode blog list background */
+--blog-list-text-color-dark: #ffffff; /* Dark mode blog list text color */
 }
 
 /* Dark Mode */
@@ -94,7 +96,15 @@ background-color: #007bff;
 color: #ffffff;
 }
 
-/* Blog list font size */
+/* Blog list font size and dark mode styles */
 .blog-list li {
 font-size: var(--blog-font-size);
+}
+
+body.dark-mode .blog-list li {
+background-color: var(--blog-list-background-color-dark);
+color: var(--blog-list-text-color-dark);
+padding: 10px;
+margin-bottom: 5px;
+border-radius: 5px;
 }
