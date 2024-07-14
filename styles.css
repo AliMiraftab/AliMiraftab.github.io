@@ -1,25 +1,31 @@
 /* Default (Light) Mode */
 :root {
-    --header-background-color-light: #f8f9fa;
-    --header-text-color-light: #333333;
-    --link-color-light: #007bff;
-  }
+--header-background-color: #f8f9fa;
+--header-text-color: #333333;
+--link-color: #007bff;
+--body-background-color: #ffffff;
+--body-text-color: #333333;
+}
 
 /* Dark Mode */
-:root.dark-mode {
+body.dark-mode {
 --header-background-color: #212529;
 --header-text-color: #ffffff;
 --link-color: #ffffff;
+--body-background-color: #333333;
+--body-text-color: #ffffff;
 }
 
 body {
 font-family: Arial, sans-serif;
+background-color: var(--body-background-color);
+color: var(--body-text-color);
 transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
-background-color: var(--header-background-color-light);
-color: var(--header-text-color-light);
+background-color: var(--header-background-color);
+color: var(--header-text-color);
 padding: 10px;
 text-align: center;
 transition: background-color 0.3s ease, color 0.3s ease;
@@ -39,7 +45,7 @@ margin-right: 10px;
 
 nav a {
 text-decoration: none;
-color: var(--link-color-light);
+color: var(--link-color);
 }
 
 nav a:hover {
@@ -48,16 +54,12 @@ text-decoration: underline;
 
 /* Checkbox Hack for Toggle */
 .toggle-checkbox {
-position: absolute;
-opacity: 0;
-height: 0;
-width: 0;
+display: none;
 }
 
 .toggle-labels {
 display: flex;
-justify-content: space-between;
-width: 100px;
+justify-content: center;
 margin: 10px auto;
 }
 
@@ -66,6 +68,7 @@ padding: 5px 10px;
 background-color: #007bff;
 color: #ffffff;
 cursor: pointer;
+border: 1px solid #007bff;
 }
 
 .toggle-label-left {
@@ -78,17 +81,16 @@ border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
 }
 
-/* Toggle Styles */
-.toggle-checkbox:checked ~ .container {
-background-color: #333333;
-color: #ffffff;
+.toggle-checkbox:checked + .container {
+background-color: var(--body-background-color);
+color: var(--body-text-color);
 }
 
-.toggle-checkbox:checked ~ .container header {
-background-color: #212529;
-color: #ffffff;
+.toggle-checkbox:checked + .container header {
+background-color: var(--header-background-color);
+color: var(--header-text-color);
 }
 
-.toggle-checkbox:checked ~ .container nav a {
-color: #ffffff;
+.toggle-checkbox:checked + .container nav a {
+color: var(--link-color);
 }
