@@ -1,10 +1,11 @@
-/* Light Mode */
+/* Default (Light) Mode */
 :root {
 --header-background-color: #f8f9fa;
 --header-text-color: #333333;
 --link-color: #007bff;
 --body-background-color: #ffffff;
 --body-text-color: #333333;
+--blog-font-size: 18px; /* Add this line for blog font size */
 }
 
 /* Dark Mode */
@@ -14,6 +15,7 @@ body.dark-mode {
 --link-color: #ffffff;
 --body-background-color: #333333;
 --body-text-color: #ffffff;
+--blog-font-size: 18px; /* Ensure this is the same for consistency */
 }
 
 body {
@@ -89,4 +91,9 @@ color: #ffffff;
 body.dark-mode .toggle-labels .toggle-label-right {
 background-color: #007bff;
 color: #ffffff;
+}
+
+/* Blog list font size */
+.blog-list li {
+font-size: var(--blog-font-size);
 }
