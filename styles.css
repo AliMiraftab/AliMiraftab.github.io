@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  header.dark-mode {
+    background-color: #212529;
+    color: #ffffff;
+  }
+  
+  nav a.dark-mode {
+    color: #ffffff;
+  }
+  
+  .toggle-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin: 10px auto;
+  }
+  
+  .toggle-label {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .toggle-label-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .toggle-label-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  /* Hide checkbox */
+  .toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  /* Toggle functionality */
+  .toggle-checkbox:checked ~ .container .toggle-labels .toggle-label-left {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  .toggle-checkbox:checked ~ .container .toggle-labels .toggle-label-right {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .toggle-checkbox:checked ~ .container .toggle-labels .toggle-label-left ~ .toggle-label-right {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .toggle-checkbox:checked ~ .container {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .toggle-checkbox:checked ~ .container header {
+    background-color: #212529;
+    color: #ffffff;
+  }
+  
+  .toggle-checkbox:checked ~ .container nav a {
+    color: #ffffff;
+  }
+  
