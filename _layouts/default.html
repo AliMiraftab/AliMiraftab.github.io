@@ -36,6 +36,24 @@
         document.body.classList.add('dark-mode');
         document.getElementById('toggle').checked = true;
       }
+
+      // Sorting functionality
+      const sortSelect = document.getElementById('sort-select');
+      sortSelect.addEventListener('change', function() {
+        const blogList = document.getElementById('blog-list');
+        const blogs = Array.from(blogList.getElementsByTagName('li'));
+        const sortBy = sortSelect.value;
+
+        blogs.sort((a, b) => {
+          if (sortBy === 'date') {
+            return new Date(b.dataset.date) - new Date(a.dataset.date);
+          } else if (sortBy === 'topic') {
+            return a.dataset.topic.localeCompare(b.dataset.topic);
+          }
+        });
+
+        blogs.forEach(blog => blogList.appendChild(blog));
+      });
     });
 
     // Toggle dark mode and save preference

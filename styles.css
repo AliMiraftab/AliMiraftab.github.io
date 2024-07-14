@@ -125,3 +125,20 @@ color: var(--link-color-dark);
 body.dark-mode .blog-list li a:active {
 color: var(--link-color-dark-active);
 }
+  
+
+/* Blog list sort */
+.sort-options {
+margin-bottom: 10px;
+text-align: right;
+}
+
+.sort-options label {
+margin-right: 5px;
+}
+
+.sort-options select {
+padding: 5px;
+font-size: 14px;
+}
+  
