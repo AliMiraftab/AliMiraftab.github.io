@@ -14,6 +14,12 @@
 --blog-list-text-color-dark: #ffffff; /* Dark mode blog list text color */
 }
 
+/* Change  */
+body {
+    margin: 20px; /* or any other value you prefer */
+    padding: 20px; /* or any other value you prefer */
+  }
+
 /* Dark Mode */
 body.dark-mode {
 --header-background-color: #212529;
