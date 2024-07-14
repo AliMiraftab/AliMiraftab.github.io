@@ -104,7 +104,7 @@ color: #ffffff;
 font-size: var(--blog-font-size);
 background-color: var(--blog-list-background-color-light);
 color: var(--blog-list-text-color-light);
-padding: 10px;
+padding: 50px;
 margin-bottom: 5px;
 border-radius: 5px;
 }
