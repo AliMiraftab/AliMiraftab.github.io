@@ -141,5 +141,12 @@ In summary, RLHF, DPO, and PPO are essential for training LLMs that can produce 
 Choosing between DPO and RLHF depends on the specific task, the complexity of the environment, and the nature of the human feedback available.
 
 
-
-
+# Refrences
+- [RLHF(PPO) vs DPO](https://medium.com/@bavalpreetsinghh/rlhf-ppo-vs-dpo-26b1438cf22b)
+- [linkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7225862632753315840/)
+- [dpo-from-scratch.ipynb](https://github.com/rasbt/LLMs-from-scratch/blob/main/ch07/04_preference-tuning-with-dpo/dpo-from-scratch.ipynb)- 
+- [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/pdf/2305.18290)
+- [Proximal Policy Optimization](https://openai.com/index/openai-baselines-ppo/)
+- [RLHF and DPO compared: user feedback methods for LLM optimization](https://medium.com/aimonks/rlhf-and-dpo-compared-user-feedback-methods-for-llm-optimization-44f4234ae689)
+- [Introducing DPO: Reinforcement Learning from Human Feedback (RLHF) by Bypassing Reward Models](https://www.linkedin.com/pulse/introducing-dpo-reinforcement-learning-from-human-feedback-rlhf/)
+- [Reinforcement Learning 101](https://towardsdatascience.com/reinforcement-learning-101-e24b50e1d292)
