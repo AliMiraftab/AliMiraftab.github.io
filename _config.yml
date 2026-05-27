@@ -1,0 +1,31 @@
+title: "Ali Miraftab"
+tagline: "Lead AI/ML Engineer · Scientist"
+description: "Ali Miraftab, Ph.D. — Lead AI/ML Engineer building production-scale recommendation, RAG, and large-scale information-retrieval systems."
+author: "Ali Miraftab"
+email: "ali.miraftab@outlook.com"
+location: "Austin, TX"
+url: "https://alimiraftab.github.io"
+baseurl: ""
+
+# Social
+linkedin: "alimiraftab"
+github: "AliMiraftab"
+scholar: "https://scholar.google.com/citations?user=alimiraftab"
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - old
+  - src.py
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore

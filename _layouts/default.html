@@ -1,69 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/styles.css">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%235eead4'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='ui-monospace,Menlo' font-size='34' font-weight='700' fill='%230a0d14'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <script>
+    // Theme: dark default, persist user choice
+    (function() {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
-  <input type="checkbox" id="toggle" class="toggle-checkbox">
-  <div class="toggle-labels">
-    <label for="toggle" class="toggle-label toggle-label-left">Light</label>
-    <label for="toggle" class="toggle-label toggle-label-right">Dark</label>
-  </div>
-  <div class="container">
-    <header>
-      <h1>{{ site.title }}</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/cv/">CV</a></li>
-          <li><a href="/blogs/">Blogs</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+  <div class="read-progress" id="read-progress"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand__mark">AM</span>
+        <span>Ali Miraftab</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" id="nav-toggle">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        {% assign u = page.url %}
+        <li><a href="{{ '/' | relative_url }}"      class="{% if u == '/' %}is-active{% endif %}">Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" class="{% if u contains '/about' %}is-active{% endif %}">About</a></li>
+        <li><a href="{{ '/cv/' | relative_url }}"    class="{% if u contains '/cv'    %}is-active{% endif %}">CV</a></li>
+        <li><a href="{{ '/blogs/' | relative_url }}" class="{% if u contains '/blog'  %}is-active{% endif %}">Writing</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
       {{ content }}
-    </main>
-  </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer__inner">
+      <div>© {{ site.time | date: "%Y" }} {{ site.author }} · Built with care in Austin, TX</div>
+      <ul class="footer__links">
+        <li><a href="mailto:{{ site.email }}" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5 1.78 1.78 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+        </a></li>
+        <li><a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 007.86 10.92c.58.1.78-.25.78-.56v-2c-3.2.69-3.87-1.36-3.87-1.36a3.05 3.05 0 00-1.28-1.68c-1.04-.72.08-.7.08-.7a2.42 2.42 0 011.77 1.19 2.46 2.46 0 003.36.96 2.45 2.45 0 01.74-1.55c-2.56-.29-5.25-1.28-5.25-5.69a4.45 4.45 0 011.18-3.09 4.14 4.14 0 01.11-3.05s.97-.31 3.17 1.18a10.9 10.9 0 015.78 0c2.2-1.49 3.17-1.18 3.17-1.18a4.14 4.14 0 01.11 3.05 4.45 4.45 0 011.18 3.09c0 4.42-2.69 5.39-5.26 5.68a2.74 2.74 0 01.78 2.13v3.16c0 .31.2.67.79.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a></li>
+        <li><a href="{{ site.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 9l11 7 9-5.7V17h2V9L12 2zm-7 11.6V18l7 4 7-4v-4.4l-7 4.4-7-4.4z"/></svg>
+        </a></li>
+      </ul>
+    </div>
+  </footer>
+
   <script>
-    // Initialize theme based on local storage value
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark-mode' || theme === null) {
-        document.body.classList.add('dark-mode');
-        document.getElementById('toggle').checked = true;
-      }
-
-      // Sorting functionality
-      const sortSelect = document.getElementById('sort-select');
-      sortSelect.addEventListener('change', function() {
-        const blogList = document.getElementById('blog-list');
-        const blogs = Array.from(blogList.getElementsByTagName('li'));
-        const sortBy = sortSelect.value;
-
-        blogs.sort((a, b) => {
-          if (sortBy === 'date') {
-            return new Date(b.dataset.date) - new Date(a.dataset.date);
-          } else if (sortBy === 'topic') {
-            return a.dataset.topic.localeCompare(b.dataset.topic);
-          }
-        });
-
-        blogs.forEach(blog => blogList.appendChild(blog));
+    // Theme toggle
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch(e) {}
       });
-    });
+    }
 
-    // Toggle dark mode and save preference
-    document.getElementById('toggle').addEventListener('change', function() {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark-mode');
-      } else {
-        localStorage.removeItem('theme');
-      }
+    // Mobile nav
+    var t = document.getElementById('nav-toggle');
+    var l = document.getElementById('nav-links');
+    if (t && l) t.addEventListener('click', function() { l.classList.toggle('is-open'); });
+
+    // Reading progress bar
+    var rp = document.getElementById('read-progress');
+    function updateProgress() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      if (rp) rp.style.width = pct + '%';
+    }
+    document.addEventListener('scroll', updateProgress, { passive: true });
+
+    // Blog topic filter
+    document.addEventListener('click', function(e) {
+      if (!e.target.classList.contains('filter')) return;
+      var topic = e.target.getAttribute('data-topic');
+      document.querySelectorAll('.filter').forEach(function(f){ f.classList.remove('is-active'); });
+      e.target.classList.add('is-active');
+      document.querySelectorAll('.post-card').forEach(function(card){
+        var t = card.getAttribute('data-topic') || '';
+        card.style.display = (topic === 'all' || t === topic) ? '' : 'none';
+      });
     });
   </script>
 </body>
