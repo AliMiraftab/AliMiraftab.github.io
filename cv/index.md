@@ -24,7 +24,6 @@ description: "Ali Miraftab, Ph.D. — Curriculum Vitae. Lead AI/ML Engineer spec
   <div class="meta-strip fade-in delay-4">
     <span>Austin, TX</span>
     <span>+1 (210) 548-1604</span>
-    <span>Open to remote</span>
   </div>
 </section>
 

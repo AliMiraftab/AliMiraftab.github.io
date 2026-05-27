@@ -5,7 +5,7 @@ description: "Lead AI/ML Engineer building production-scale recommendation, RAG,
 ---
 
 <section class="hero">
-  <span class="eyebrow fade-in">Available for senior AI/ML roles</span>
+  <span class="eyebrow fade-in">Builder at heart · humans first</span>
   <h1 class="fade-in delay-1">
     Hi, I'm Ali — I build <span class="grad">production-scale AI</span> that moves the metrics that matter.
   </h1>
@@ -29,8 +29,7 @@ description: "Lead AI/ML Engineer building production-scale recommendation, RAG,
 
   <div class="meta-strip fade-in delay-4">
     <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, TX</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Open to remote</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg> Ph.D., AI &amp; Big Data — UTSA</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg> Ph.D., AI &amp; Big Data</span>
   </div>
 </section>
 

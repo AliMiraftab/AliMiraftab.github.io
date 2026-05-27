@@ -1,6 +1,6 @@
 title: "Ali Miraftab"
 tagline: "Lead AI/ML Engineer · Scientist"
-description: "Ali Miraftab, Ph.D. — Lead AI/ML Engineer building production-scale recommendation, RAG, and large-scale information-retrieval systems."
+description: "Ali Miraftab — Lead AI/ML Engineer building production-scale recommendation, RAG, and large-scale information-retrieval systems."
 author: "Ali Miraftab"
 email: "ali.miraftab@outlook.com"
 location: "Austin, TX"
@@ -8,7 +8,7 @@ url: "https://alimiraftab.github.io"
 baseurl: ""
 
 # Social
-linkedin: "alimiraftab"
+linkedin: "https://www.linkedin.com/in/ali-miraftab-phd-85a63997/"
 github: "AliMiraftab"
 scholar: "https://scholar.google.com/citations?user=alimiraftab"
 
