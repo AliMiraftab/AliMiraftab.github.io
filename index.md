@@ -5,7 +5,7 @@ description: "Lead AI/ML Engineer building production-scale recommendation, RAG,
 ---
 
 <section class="hero">
-  <span class="eyebrow fade-in">Builder at heart · humans first</span>
+  <span class="eyebrow fade-in">Builder at heart</span>
   <h1 class="fade-in delay-1">
     Hi, I'm Ali — I build <span class="grad">production-scale AI</span> that moves the metrics that matter.
   </h1>
