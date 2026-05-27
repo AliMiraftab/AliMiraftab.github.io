@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Hallucinations in LLMs - Causes, Mitigation, and Deploymnets
+layout: post
+title: Hallucinations in LLMs — Causes, Mitigation, and Deployments
 date: 2023-12-24 09:45:00 -0400
 topic: LLMs
 ---

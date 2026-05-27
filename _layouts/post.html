@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post__header">
+    <a href="{{ '/blogs/' | relative_url }}" class="muted" style="font-family:var(--font-mono); font-size:0.85rem;">← All writing</a>
+    <h1 class="post__title">{{ page.title }}</h1>
+    <div class="post__meta">
+      {% if page.topic %}<span class="post-card__topic">{{ page.topic }}</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    </div>
+  </header>
+
+  <div class="post__body">
+    {{ content }}
+  </div>
+
+  <hr>
+
+  <div class="row" style="justify-content:space-between;">
+    <a class="btn" href="{{ '/blogs/' | relative_url }}">← Back to writing</a>
+    <a class="btn btn--primary" href="mailto:{{ site.email }}">Discuss this with me</a>
+  </div>
+</article>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Generative AI in Computer Vision Applications
 date: 2023-12-24 09:45:00 -0400
 topic: GenAI - CV
