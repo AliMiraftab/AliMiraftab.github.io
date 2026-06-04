@@ -141,4 +141,10 @@ description: "Lead AI/ML Engineer building production-scale recommendation, RAG,
     {% endfor %}
   </ul>
   <p class="mt-3"><a href="{{ '/blogs/' | relative_url }}">All posts →</a></p>
+
+  <a class="series-banner mt-3" href="{{ '/retrieval-ranking-recommendation/' | relative_url }}">
+    <span class="kick">Featured series · 24 parts</span>
+    <h3>Retrieval, Ranking &amp; Recommendation</h3>
+    <p>A hands-on tour of the full recommender stack — features, retrieval, ranking, serving, and closing the loop, with code, math, and production notes. →</p>
+  </a>
 </section>

@@ -54,6 +54,7 @@
         <li><a href="{{ '/about/' | relative_url }}" class="{% if u contains '/about' %}is-active{% endif %}">About</a></li>
         <li><a href="{{ '/cv/' | relative_url }}"    class="{% if u contains '/cv'    %}is-active{% endif %}">CV</a></li>
         <li><a href="{{ '/blogs/' | relative_url }}" class="{% if u contains '/blog'  %}is-active{% endif %}">Writing</a></li>
+        <li><a href="{{ '/retrieval-ranking-recommendation/' | relative_url }}" class="{% if u contains '/retrieval-ranking' %}is-active{% endif %}">RecSys Series</a></li>
         <li>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -128,6 +129,56 @@
         card.style.display = (topic === 'all' || t === topic) ? '' : 'none';
       });
     });
+  </script>
+
+  <!-- Diagrams (Mermaid) + Math (MathJax) — loaded only on pages that need them -->
+  <script>
+  (function () {
+    function loadScript(src, cb) {
+      var s = document.createElement('script');
+      s.src = src; s.async = true;
+      if (cb) s.onload = cb;
+      document.head.appendChild(s);
+    }
+
+    // --- Mermaid: turn ```mermaid code blocks into rendered diagrams ---
+    var mermaidBlocks = document.querySelectorAll('.language-mermaid, pre > code.language-mermaid');
+    if (mermaidBlocks.length) {
+      mermaidBlocks.forEach(function (el) {
+        var host = el.closest('.language-mermaid') || el.closest('pre') || el;
+        if (host.dataset && host.dataset.mmReady) return;
+        var src = (host.textContent || '').replace(/\s+$/, '');
+        var d = document.createElement('div');
+        d.className = 'mermaid';
+        d.textContent = src;
+        d.dataset.mmReady = '1';
+        host.replaceWith(d);
+      });
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js', function () {
+        var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+        mermaid.initialize({ startOnLoad: false, securityLevel: 'loose',
+                             theme: dark ? 'dark' : 'neutral', fontFamily: 'inherit' });
+        try { mermaid.run({ querySelector: '.mermaid' }); }
+        catch (e) { mermaid.init(undefined, document.querySelectorAll('.mermaid')); }
+      });
+    }
+
+    // --- MathJax: render $$…$$ (kramdown math/tex script tags) and inline $…$ ---
+    if (document.querySelector('.post__body')) {
+      window.MathJax = {
+        jax: ['input/TeX', 'output/CommonHTML'],
+        extensions: ['tex2jax.js'],
+        TeX: { extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js'] },
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      };
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js');
+    }
+  })();
   </script>
 </body>
 </html>

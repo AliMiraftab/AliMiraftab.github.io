@@ -13,6 +13,14 @@ description: "Notes on RAG, LLM fine-tuning, recommendation systems, and generat
   </p>
 </section>
 
+<section class="section" style="padding-top:0;">
+  <a class="series-banner" href="{{ '/retrieval-ranking-recommendation/' | relative_url }}">
+    <span class="kick">Featured series · 24 parts</span>
+    <h3>Retrieval, Ranking &amp; Recommendation</h3>
+    <p>The full stack of modern recommender systems — features, retrieval, ranking, serving, and closing the loop. With code, math, diagrams, and production notes. →</p>
+  </a>
+</section>
+
 <section class="section">
   {% assign topics = site.posts | map: "topic" | uniq | compact %}
   <div class="filters">
