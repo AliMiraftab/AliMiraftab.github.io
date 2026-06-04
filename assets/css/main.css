@@ -879,7 +879,8 @@ footer {
   padding: 1.2rem;
   overflow-x: auto;
 }
-.mermaid svg { max-width: 100%; height: auto; margin: 0 auto; }
+/* Let Mermaid scale up to fill the box instead of its small natural width */
+.mermaid svg { width: 100% !important; max-width: 880px !important; height: auto; margin: 0 auto; }
 
 /* -------- Series hub page -------- */
 .series-card {
