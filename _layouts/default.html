@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
   <script>
     // Theme: dark default, persist user choice
@@ -144,14 +144,19 @@
     // --- Mermaid: turn ```mermaid code blocks into rendered diagrams ---
     var mermaidBlocks = document.querySelectorAll('.language-mermaid, pre > code.language-mermaid');
     if (mermaidBlocks.length) {
+      var mmSeen = [];
       mermaidBlocks.forEach(function (el) {
-        var host = el.closest('.language-mermaid') || el.closest('pre') || el;
-        if (host.dataset && host.dataset.mmReady) return;
+        // Replace the whole code block, whether Rouge wrapped it (<div class="…rouge">)
+        // or emitted a bare <pre><code class="language-mermaid">.
+        var host = el.tagName === 'CODE'
+          ? (el.closest('div.highlighter-rouge') || el.closest('pre') || el)
+          : el;
+        if (!host || !host.parentNode || mmSeen.indexOf(host) !== -1) return;
+        mmSeen.push(host);
         var src = (host.textContent || '').replace(/\s+$/, '');
         var d = document.createElement('div');
         d.className = 'mermaid';
         d.textContent = src;
-        d.dataset.mmReady = '1';
         host.replaceWith(d);
       });
       loadScript('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js', function () {
